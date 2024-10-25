@@ -1,0 +1,7 @@
+<h2>Todos os Contatos</h2>
+<ul>
+  <li *ngFor="let contato of contatos">
+    {{ contato.nome }} - {{ contato.telefone }} - {{ contato.tipo }}
+    <span *ngIf="contato.favorito">🌟</span>
+  </li>
+</ul>
