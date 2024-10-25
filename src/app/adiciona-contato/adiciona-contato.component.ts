@@ -20,8 +20,6 @@ export class AdicionaContatoComponent {
   tiposContato = Object.values(TipoContato);
 
   adicionarContato() {
-    console.log('Favorito:', this.favorito);
-    console.log('Favorito:', this.contatos);
     const novoContato = new Contato(
       this.nome,
       this.telefone,
@@ -33,12 +31,12 @@ export class AdicionaContatoComponent {
 
     this.contatos.push(novoContato);
 
-    // Limpar os campos do formulário
+    
     this.nome = '';
     this.telefone = '';
     this.email = '';
     this.aniversario = '';
     this.tipo = TipoContato.Amigo;
-    this.favorito = true;
+    this.favorito = false;
   }
 }
